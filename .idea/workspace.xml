@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70464be3-f64f-4827-afab-c03392718f43" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/02查找数组旋转后的最小值/FindMinValue.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03零子数组/FindSubArrayZeroSum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Data-Structures-and-Algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Data-Structures-and-Algorithms.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03零子数组/FindSubArrayZeroSum.py" beforeDir="false" afterPath="$PROJECT_DIR$/03零子数组/FindSubArrayZeroSum.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,8 +38,8 @@
       <file leaf-file-name="FindSubArrayZeroSum.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/03零子数组/FindSubArrayZeroSum.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+            <state relative-caret-position="63">
+              <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -76,9 +73,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="566" />
-    <option name="y" value="22" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="177" />
+    <option name="y" value="23" />
     <option name="width" value="1014" />
     <option name="height" value="692" />
   </component>
@@ -187,7 +184,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="566" y="22" width="1014" height="692" extended-state="0" />
+    <frame x="177" y="23" width="1014" height="692" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -236,8 +233,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/03零子数组/FindSubArrayZeroSum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        <state relative-caret-position="63">
+          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
         </state>
       </provider>
     </entry>
