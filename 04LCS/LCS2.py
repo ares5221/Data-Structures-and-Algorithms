@@ -6,18 +6,11 @@
 """
 def LCS2(i, j):
     if i >= aLength or j >= bLength:
-        return
-    print(i,j)
+        return 0
     if aString[i] == bString[j]:
-        res = 1 + LCS2(i+1,j+1)
-        print(res)
+        return 1 + LCS2(i+1,j+1)
     else:
-        if LCS2(i+1,j) > LCS2(i,j+1):
-            LCS2(i + 1, j)
-            print(i,j)
-        else:
-            LCS2(i,j+1)
-        print(i,j)
+        return LCS2(i + 1, j) if LCS2(i+1,j) > LCS2(i,j+1) else LCS2(i,j+1)
 
 if __name__ == '__main__':
     # aString = 'ABCBDAB'
@@ -26,4 +19,4 @@ if __name__ == '__main__':
     bString = "BDCABA";
     aLength = len(aString)
     bLength = len(bString)
-    print('%s\n',LCS2(0,0))
+    print('最长公共子序列长度为：', LCS2(0,0))
