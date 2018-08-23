@@ -14,9 +14,12 @@ def Edit_Distance(src, tar):
     for i in range(1,srcLength+1):
         for j in range(1,tarLength+1):
             if src[i-1] == tar[j-1]:
-                matrix[i][j] = matrix[i-1][j-1]
+                d = 0
+                # matrix[i][j] = matrix[i-1][j-1]
             else:
-                matrix[i][j] =min(matrix[i-1][j-1] +1, 1+ min(matrix[i-1][j], matrix[i][j-1]))
+                d = 1
+                # matrix[i][j] =min(matrix[i-1][j-1] +1, 1+ min(matrix[i-1][j], matrix[i][j-1]))
+            matrix[i][j] = min(matrix[i - 1][j - 1] + d, matrix[i - 1][j] +1, matrix[i][j - 1] +1)
     for i in matrix:
         print(i)
     print(matrix[srcLength][tarLength])
@@ -25,8 +28,8 @@ def Edit_Distance(src, tar):
 if __name__ == "__main__":
     # src = 'abddcdefdgbd22svb'
     # tar = 'bcdefg34rdyvdfsd'
-    # src = 'ofailing'
-    # tar = 'osailn'
-    src = "string"
-    tar = "story"
+    src = 'ofailing'
+    tar = 'osailn'
+    # src = "string"
+    # tar = "story"
     Edit_Distance(src, tar)

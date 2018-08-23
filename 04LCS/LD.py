@@ -10,25 +10,21 @@ def fn_timer(function):
         t0 = time.time()
         result = function(*args, **kwargs)
         t1 = time.time()
-        print("Total time running %s: %s seconds" %
-              (function.__name__, str(t1 - t0))
-              )
+        print("Total time running %s: %s seconds" % (function.__name__, str(t1 - t0)) )
         return result
     return function_timer
 
 def levenshtein1(source, target):
     if len(source) < len(target):
         return levenshtein1(target, source)
-    # So now we have len(source) >= len(target).
     if len(target) == 0:
         return len(source)
     # We call tuple() to force strings to be used as sequences
     # ('c', 'a', 't', 's') - numpy uses them as values by default.
     source = numpy.array(tuple(source))
     target = numpy.array(tuple(target))
-    # We use a dynamic programming algorithm, but with the
-    # added optimization that we only need the last two rows
-    # of the matrix.
+    # We use a dynamic programming algorithm, but with the added optimization that we only
+    #  need the last two rows of the matrix.
     previous_row = numpy.arange(target.size + 1)
     for s in source:
         # Insertion (target grows longer than source):
@@ -49,7 +45,6 @@ def levenshtein1(source, target):
 def levenshtein2(s1, s2):
     if len(s1) < len(s2):
         return levenshtein2(s2, s1)
-    # len(s1) >= len(s2)
     if len(s2) == 0:
         return len(s1)
     previous_row = range(len(s2) + 1)
@@ -88,25 +83,23 @@ def levenshtein3(s, t):
 @fn_timer
 def calllevenshtein1(s, t, n):
     for i in range(n):
-        levenshtein3(s, t)
-
+        t1 = levenshtein1(s, t)
 @fn_timer
 def calllevenshtein2(s, t, n):
     for i in range(n):
-        levenshtein3(s, t)
-
+        t2 = levenshtein2(s, t)
+        print(t2)
 @fn_timer
 def calllevenshtein3(s, t, n):
     for i in range(n):
         levenshtein3(s, t)
-
 @fn_timer
 def calllevenshtein4(s, t, n):
     for i in range(n):
         Levenshtein.distance(s, t)
 
 if __name__ == "__main__":
-    n = 50
+    n = 1
     a = 'abddcdefdgbd22svb'
     b = 'bcdefg34rdyvdfsd'
     calllevenshtein1(a, b, n)
