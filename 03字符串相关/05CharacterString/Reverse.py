@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-__mtime__ = '2018/8/27'
+三次翻转
 """
 def ReverseString(src, start, end):
     if src is None or start < 0 or end < 0 or start >= end or len(src) < end +1:
