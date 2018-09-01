@@ -26,7 +26,7 @@ def KMPStringSearch(src, pat):
 def GetNext(pat, next_list):
     next_list[0] = -1
     j, k = 0, -1
-    while j < len(pat) -1:
+    while j < len(pat) - 1:
         if k == -1 or pat[j] == pat[k]:
             j += 1
             k += 1
