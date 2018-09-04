@@ -1,0 +1,16 @@
+给定一个无重复元素的数组A[0…N-1]，求找到一个该数组的局部最大值。规定：在数
+组边界外的值无穷小。即：A[0]＞A[-1]，A[N-1] ＞A[N]。
+显然，遍历一遍可以找到全局最大值，而全局最大值显然是局部最大值。
+可否有更快的办法？
+
+若子数组Array[from,…,to]满足Array[from]＞Array[from-1], Array[to]＞Array[to+1]
+局部最大值可以视为满足以上条件的长度为1的一个数组。考量二分法
+
+使用索引left、right分别指向数组首尾，根据定义，该数组为自身满足以上条件
+求中点mid=(left+right)/2
+A[mid]＞A[mid+1]，子数组A[left...mid]也满足
+丢弃后半段：right=mid
+A[mid+1]＞A[mid]，子数组A[mid...right]高原数组
+ 丢弃前半段：left=mid+1
+递归直至left==right
+时间复杂度为O(logN)。
