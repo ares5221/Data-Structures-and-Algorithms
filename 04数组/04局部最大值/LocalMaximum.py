@@ -4,11 +4,11 @@
 查找局部最大值
 """
 def LocalMaximum(src):
-    srclen = src.count()
-    print(srclen)
+    srclen = len(src)
+
     return srclen
 
-if __name__ == '__name__':
-    src = [2,3,6,8,12,5,6,7,9,15,32,43]
+if __name__ == '__main__':
+    src = [2, 3, 6, 8, 12, 5, 6, 7, 9, 15, 32, 43]
     localMax = LocalMaximum(src)
-    print(src.count())
+    print(localMax)
