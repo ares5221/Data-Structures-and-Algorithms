@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-__mtime__ = '2018/9/7'
+暴力求解一一比较
 """
 class Solution:
     def firstMissingPositive(self, A):
@@ -15,7 +15,6 @@ class Solution:
             if flag == 0:
                 break
         return i
-
 
 if __name__ == '__main__':
     src = [3, 5, 1, 2, -3, 7, 4 ,8]
