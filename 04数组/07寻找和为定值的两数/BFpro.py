@@ -1,12 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-__mtime__ = '2018/9/10'
-"""
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""
-暴力求解
+先排序，再找
 """
 def TwoNumSumPro(src, Sum):
     if src is None or len(src) == 1:
