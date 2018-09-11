@@ -3,6 +3,7 @@
 """
 八皇后——盲目迭代法
 """
+import time
 def check_1(a, n):
     for i in range(1, n):
         for j in range(0, i):
@@ -31,4 +32,6 @@ def queens_1():
     print('八皇后问题的全部解法：',count)
 
 if __name__ == '__main__':
+    time1 = time.time()
     queens_1()
+    print('消耗时间为：', time.time() - time1)
