@@ -41,14 +41,7 @@ if __name__ == '__main__':
     queenNum = 8
     src = [i for i in range(queenNum)]
     result = [deepcopy(src)]
-    EightQueenByFP(queenNum, 0)
     while EightQueenByFP(src, len(src)):
-        for i in range(queenNum):
-            for j in range(queenNum):
-                if src[i] - src[j] != i-j or src[i] - src[j] != j-i:
-                    result.append(deepcopy(src))
-
-        print(deepcopy(src),'@@@@@@@@',src)
-
+        result.append(deepcopy(src))
     for i in result:
         print(i)
