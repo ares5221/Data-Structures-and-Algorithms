@@ -16,7 +16,6 @@ def EightQueenByFP(src, slen):
     while src[j] <= src[i]:
         j -=1
     # 交换：S[i]，S[j]
-    # swap(src, i, j)
     src[j], src[i] = src[i], src[j]
     # 翻转：S[i+1…N-1]
     Reverse(src, i+1, slen-1)
@@ -28,6 +27,14 @@ def swap(li, i, j):
     temp = li[j]
     li[j] = li[i]
     li[i] = temp
+def is_conflict(src):
+    slen = len(src)
+    for i in range(slen):
+        for j in range(i+1,slen):
+            if src[i] - src[j] == i - j or src[j] - src[i] == i - j:
+                return False
+                break
+    return True
 
 def Reverse(li, i, j):
     if li is None or i < 0 or j < 0 or i >= j or len(li) < j + 1:
@@ -41,7 +48,11 @@ if __name__ == '__main__':
     queenNum = 8
     src = [i for i in range(queenNum)]
     result = [deepcopy(src)]
+    count = 0
     while EightQueenByFP(src, len(src)):
-        result.append(deepcopy(src))
+        if is_conflict(src):  # 若对角线冲突则不满足放置条件，没有冲突为True
+            result.append(deepcopy(src))
+            count +=1
     for i in result:
         print(i)
+    print(queenNum, '皇后问题的全部解法：',count)

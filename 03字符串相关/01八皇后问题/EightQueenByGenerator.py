@@ -42,6 +42,6 @@ if __name__ == '__main__':
     res = list(Queens(qNum))
     for i in res:
         print(i)
-        # prettyprint(i)
+        # prettyprint(i)  # 形式化输出结果
     print(len(res))
     # prettyprint(random.choice(res))
