@@ -3,6 +3,7 @@
 """
 递归求解和为sum的数组中的数
 """
+# flag[]为最终解情况，i为考察src[i]是否加入，has表示当前的和
 def NumforSum(src, slen, s_sum, flag, i, has):
     if i >= slen or slen == 0:
         return
