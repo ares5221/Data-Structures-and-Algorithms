@@ -22,8 +22,29 @@ def Manacher(s):
         maxd = max(maxd, f[i])  # 更新回文子串最长长度
     return int((maxd + 1) / 2) - 1  # 去除特殊字符
 
+
+def manacher(s: str) -> list:
+    # s = '#' + '#'.join(s0) + '#'
+    l = len(s)
+    r = [0] * l
+    mx, pos = 0, 0
+    for i in range(l):
+        if i > mx:
+            r[i] = 1
+        else:
+            r[i] = min(r[2 * pos - i], mx - i)
+        while i - r[i] >= 0 and i + r[i] < l and s[i + r[i]] == s[i - r[i]]:
+            r[i] += 1
+        if r[i] + i - 1 > mx:
+            mx = r[i] + i - 1
+            pos = i
+    return r
+
 if __name__ == '__main__':
     src = 'abcdzdcab'
     src = '#' + '#'.join(src) + '#'  # 字符串预处理，用特殊字符隔离字符串，方便处理偶数子串
     res = Manacher(src)
     print(src, ' 最长回文子串是：', res)
+
+    res1 = manacher(src)
+    print(src, ' 最长回文子串是：', res1)
