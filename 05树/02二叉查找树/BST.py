@@ -3,12 +3,16 @@
 """
 二叉查找树的基本操作实现 插入 查找 删除
 """
+
+
 class TreeNode:
     """二叉查找树的定义"""
+
     def __init__(self, val):
         self.val = val
         self.left = None
         self.right = None
+
 
 class OperationTree:
     def insert(self, root, val):
@@ -81,6 +85,7 @@ class OperationTree:
         print(root.val, end=' ')
         self.printTree(root.right)
 
+
 if __name__ == '__main__':
     List = [17, 5, 35, 2, 11, 29, 38, 9, 16, 8]
     root = None  # 定义根结点
@@ -95,11 +100,11 @@ if __name__ == '__main__':
     print('树中最小值为:', op.findMin(root).val)
     print('查询树中值为5的节点:', op.query(root, 5))
     print('查询树中值为100的节点:', op.query(root, 100))
-    print('删除树中值为16的节点:', end=' ')
+    print('删除树中值为16的节点:', end='')
     root = op.delNode(root, 16)
     op.printTree(root)
     print('')
-    print('删除树中值为5的节点:', end=' ')
+    print('删除树中值为5的节点:', end='')
     root = op.delNode(root, 5)
     op.printTree(root)
     print('')
