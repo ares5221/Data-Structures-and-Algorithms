@@ -2,6 +2,7 @@
 # _*_ coding:utf-8 _*_
 '''
 根据二叉树的前序 中序遍历 求其后序遍历
+以及通过中序后序求前序遍历
 '''
 class Node(object):
     def __init__(self, value=None, left=None, right=None):

@@ -31,7 +31,7 @@ if __name__ == '__main__':
     # post = [5,4,3,2,1]
     # post = [3,5,1,4,2]
     # post = [1,2,5,4,3]
-    post = [5,6,4,10,12,7,8]
+    # post = [5,6,4,10,12,7,8]
     # post = [5,6,4,10,14,12,8]
     is_postOrder = IsPostOrder(post, len(post))
     print(is_postOrder)
