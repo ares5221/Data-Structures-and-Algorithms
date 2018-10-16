@@ -7,23 +7,31 @@
 递归判断前后半段是否满足同样的要求。
 """
 def IsPostOrder(a, n):
-    if n <=1:
-        return True
+    if n <=0:
+        return False
     root = a[-1]
-    nleft = 0
-    while nleft < n-1:
+    nleft = 0 #在二叉搜索树中的左子树的节点小于根节点
+    for nleft in range(0,n):
         if a[nleft] > root:
             break
-        nleft +=1
-    nRight = n-2 #n-1 is root
-    while nRight >=0:
+    nRight = nleft #在二叉搜索树中的右子树的节点大于根节点
+    for nRight in range(nleft,n):
         if a[nRight] < root:
-            break
-        nRight -=1
-    if nRight != nleft-1:
-        return False
-    return IsPostOrder(a,nleft) and IsPostOrder(a+nleft,n-nleft-1)
+            return False
+    left = True #判断左子树是不是二叉搜索树
+    if nleft > 0:
+        left = IsPostOrder(a[0:nleft],nleft)
+    right = True #判断右子树是不是二叉搜索树
+    if nRight < n-1:
+        right = IsPostOrder(a[nleft:],n- nleft-1)
+    return left and right
+
 if __name__ == '__main__':
-    post = [1,2,5,4,3]
+    # post = [1,2,3,4,5]
+    # post = [5,4,3,2,1]
+    # post = [3,5,1,4,2]
+    # post = [1,2,5,4,3]
+    post = [5,6,4,10,12,7,8]
+    # post = [5,6,4,10,14,12,8]
     is_postOrder = IsPostOrder(post, len(post))
     print(is_postOrder)
