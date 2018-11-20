@@ -45,7 +45,8 @@ def Reverse(li, i, j):
         j -= 1
 
 if __name__ == '__main__':
-    queenNum = 8
+    # queenNum = 8
+    queenNum = int(input())
     src = [i for i in range(queenNum)]
     result = [deepcopy(src)]
     count = 0
@@ -53,6 +54,7 @@ if __name__ == '__main__':
         if is_conflict(src):  # 若对角线冲突则不满足放置条件，没有冲突为True
             result.append(deepcopy(src))
             count +=1
-    for i in result:
-        print(i)
-    print(queenNum, '皇后问题的全部解法：',count)
+    # for i in result:
+    #     print(i)
+    # print(queenNum, '皇后问题的全部解法：',count)
+    print(count)
