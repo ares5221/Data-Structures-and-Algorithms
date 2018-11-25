@@ -7,7 +7,7 @@ class SNode(object):
 
 
 class Stack(object):
-    """docstring for Stack"""
+    """链表实现栈"""
 
     def __init__(self, length=0, head=None):
         self.length = length

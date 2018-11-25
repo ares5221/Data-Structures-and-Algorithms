@@ -9,7 +9,7 @@ class QNode(object):
 
 
 class Queue(object):
-    """docstring for Queue"""
+    """链表创建队列"""
 
     def __init__(self, front=None, rear=None):
         '''使用链表创建队列,front指头，rear指尾的后一个'''

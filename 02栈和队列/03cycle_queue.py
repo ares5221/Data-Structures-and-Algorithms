@@ -1,7 +1,7 @@
 # coding = utf-8
 
 class CycleQueue(object):
-    """docstring for CircleQueue"""
+    """实现循环队列"""
 
     def __init__(self, maxsize, front=0, rear=0):
         '''循环队列有空间大小限制'''

@@ -1,13 +1,15 @@
 # coding = utf-8
 class Queue(object):
-    """docstring for Queue"""
+    """列表实现队列"""
 
     def __init__(self):
         '''使用列表创建队列'''
         self.items = []
 
     def inQueue(self, data):
-        '''入队列(头出尾进)'''
+        '''入队列(头出尾进)往队尾插入一个元素
+        这里假设队尾是列表的尾部，如果你的队列的 '出队' 操作很频繁，
+        则应该设置队尾是列表的头部，这样出队操作是 self.__list.pop()，它的时间复杂度为O(1)'''
         self.items.append(data)
 
     def isEmpty(self):

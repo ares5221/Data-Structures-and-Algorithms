@@ -1,7 +1,7 @@
 # coding = utf-8
 
 class Stack(object):
-    """docstring for Stack"""
+    '''用顺序表实现栈'''
 
     def __init__(self):
         '''初始化栈为空列表'''
